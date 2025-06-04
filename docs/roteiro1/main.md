@@ -1,6 +1,7 @@
 ## Objetivo
 
 O objetivo para esse roteiro era desenvolver o microsserviço EXCHANGE. Nele o usuário poderia pegar o valor de sell e de buy da conversão de uma moeda para outra.
+
 ## Montagem do Roteiro
 
 
@@ -16,10 +17,10 @@ A Api escolhida foi a [AwesomeAPI](https://docs.awesomeapi.com.br/api-de-moedas)
 
 Fazer a conexão com a api e a rota do exchange em FASTAPI 
 
-=== "De um arquivo remoto"
+=== "Main.py do Exchange"
 
     ``` { .py .copy .select linenums='1' title="main.py" }
-    --8<-- "https://github.com/laupontiroli/exchange-service/blob/main/app/main.py"
+    --8<-- "https://raw.githubusercontent.com/laupontiroli/exchange-service/main/app/main.py"
     ```
 
 
@@ -45,8 +46,6 @@ flowchart TD
         gateway([API Gateway]):::trusted
         auth([Authentication]):::trusted
         account([Account Service]):::trusted
-        product([Product Service]):::trusted
-        order([Order Service]):::trusted
         exchange([Exchange Service]):::danger
         db[(Database)]:::database
     end
@@ -55,7 +54,8 @@ flowchart TD
     internet-->|REQUEST|gateway
     gateway-->|CRUD|auth
     gateway-->|CRUD|account
-    gateway-->|CONSULT|exchange
+    gateway-.->|CONSULT|exchange
+    account --> db
 
     auth-->|CRUD|account
 
@@ -66,16 +66,26 @@ flowchart TD
 
 ```
 
-[Mermaid](https://mermaid.js.org/syntax/architecture.html){:target="_blank"}
+=== "Dockerfile do Exchange"
 
-## Questionário, Projeto ou Plano
+    ``` {  .copy .select linenums='1' title="Dockerfile" }
+    --8<-- "https://raw.githubusercontent.com/laupontiroli/exchange-service/main/Dockerfile"
+    ```
 
-Esse seção deve ser preenchida apenas se houver demanda do roteiro.
+
+Também foi adicionado no compose.yaml geral esse serviço 
+
+=== "Compose.yaml"
+
+    ``` {  .yaml .copy .select linenums='1' title="Compose.yaml" }
+    --8<-- "https://raw.githubusercontent.com/laupontiroli/platforms/main/apis/compose.yaml"
+    ```
+
 
 ## Discussões
 
-Quais as dificuldades encontradas? O que foi mais fácil? O que foi mais difícil?
+Esse roteiro foi particulamente fácil. O mais dificil foi entender como montar o dockerfile e adicionar ao compose geral.
 
 ## Conclusão
 
-O que foi possível concluir com a realização do roteiro?
+Com essa parte do roteiro nos aprendemos a adicionar microsserviços e também que é possível a integração entre serviços de diferentes linguagens.

@@ -1,20 +1,9 @@
-# Entrega Individual
-
-
-
+# Entrega Individual - Laura Pontiroli
     2025.1
 
 
-## Grupo
-
-1. Laura Pontiroli Machado
-2. Julia Almeida Silva
-- Grupo:
-    - Laura Pontiroli Machado
-    - Julia Almeida Silva
-
-
-
+## Aluno
+- Laura Pontiroli Machado
 
 ## Entregas
 
@@ -22,8 +11,9 @@
 - [x] Roteiro 2 - PRODUCT
 - [x] Roteiro 3 - ORDER
 - [x] Roteiro 4 - JENKINS
-- [ ] Roteiro 5 - MINIKUBE
+- [x] Roteiro 5 - MINIKUBE
 - [ ] Roteiro 6 - BOTTLENECKS
+- [x] Projeto - PROJETO DESENVOLVIDO EM DUPLA COM JULIA ALMEIDA SILVA
 
 ## Diagramas
 
@@ -69,7 +59,7 @@ flowchart TD
     order-->|CRUD|db
     order-->|CRUD|product
 
-    exchange-.->|CONSULT|api3rd
+    exchange-->|CONSULT|api3rd
 
     %% LINK STYLE FOR DANGER ZONE
     class exchange,api3rd danger
@@ -77,6 +67,7 @@ flowchart TD
     %% AGGREGATE FLOW to DB
     account-->|CRUD|db
 ```
+
 
 
 
@@ -95,13 +86,6 @@ link dos repositórios:
 - [gateway-service](https://github.com/laupontiroli/gateway-service)
 - [exchange-service](https://github.com/laupontiroli/exchange-service)
 
-
-
-## Exemplo de vídeo
-
-Video do postman da solução rodando localmente
-
-<iframe width="100%" height="470" src="https://www.youtube.com/embed/3574AYQml8w" allowfullscreen></iframe>
 
 
 ## Referências
