@@ -1,5 +1,5 @@
 # Projeto em Dupla
-##Grupo 
+## Grupo 
 
 - Laura Pontiroli Machado 
 - Julia Almeida Silva 
@@ -20,6 +20,7 @@ O deploy da aplicação foi feito com EKS.
 
 [Aqui](http://a06e91cf3817e402eb8328891ec4ffd2-841382628.us-east-2.elb.amazonaws.com:8080/)
 
+![img](cesk.png)
 
 ### Tarefa 3 
 
@@ -45,4 +46,6 @@ Mais do que uma conveniência técnica, o uso de PaaS foi uma decisão estratég
 
 ### Tarefa 7
 
+Video da demostração da API 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6-eX7mBU0jk?si=1mFuQTYP-8SEla8a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

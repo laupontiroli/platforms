@@ -32,34 +32,10 @@ Para isso foi necessário criar as pastas `k8s` em todos os services no seguinte
     ``` { .tree }
     account-service
         k8s
-            configmap.yaml
-            deployment.yaml
             service.yaml
     ```
 
 
-    === "configmap.yaml"
-
-        ``` { .yaml .copy .select linenums="1" }
-        --8<-- "https://raw.githubusercontent.com/laupontiroli/account-service/main/k8s/configmap.yaml"
-        ```
-
-        ```{ .bash .copy .select }
-        kubectl apply -f ./k8s/configmap.yaml
-        kubectl get configmap
-        ```
-
-    === "deployment.yaml"
-
-        ``` { .yaml .copy .select linenums="1" }
-        --8<-- "https://raw.githubusercontent.com/laupontiroli/account-service/main/k8s/deployment.yaml"
-        ```
-
-        ```{ .bash .copy .select }
-        kubectl apply -f ./k8s/deployment.yaml
-        kubectl get deployments
-        kubectl get pods
-        ```
 
     === "service.yaml"
 
@@ -70,7 +46,7 @@ Para isso foi necessário criar as pastas `k8s` em todos os services no seguinte
         ```{ .bash .copy .select }
         kubectl apply -f ./k8s/service.yaml
         kubectl get services
-        ```
+        ``` -->
 
 
 
